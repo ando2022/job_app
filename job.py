@@ -8,7 +8,7 @@ st.set_page_config(page_title="🇨🇭 Swiss Job Explorer", layout="wide")
 # --- Load data
 @st.cache_data
 def load_data():
-    df = pd.read_csv("JOB_APP/cleaned_jobs.csv")  # Adjust path as needed
+    df = pd.read_csv("cleaned_jobs.csv")  # Adjust path as needed
     df = df.dropna(subset=["latitude", "longitude"])  # Remove rows without coordinates
     return df
 
